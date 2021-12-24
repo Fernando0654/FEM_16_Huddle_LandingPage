@@ -37,7 +37,7 @@
         width: 100%;
         max-width: inherit;
         padding: 14em 0em;
-        margin-top: 5em;
+        margin-top: 2em;
         position: relative;
         .section-wrapper {
             @include mixin.flex(row, center, center);
@@ -73,11 +73,12 @@
             }
         }
         &.fill {
-            background:  linear-gradient(to bottom, #f6fbff 0%, #f6fbff 100%) no-repeat;
+            background: linear-gradient(to bottom, #f6fbff 0%, #f6fbff 100%) no-repeat;
             background-position: center;
             background-size: 100% calc(100% - 19vw);
         }
-        .top_img, .bottom_img {
+        .top_img,
+        .bottom_img {
             position: absolute;
             width: 100%;
         }
@@ -86,6 +87,81 @@
         }
         .bottom_img {
             bottom: 0;
+        }
+    }
+    h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: clamp(2rem, 2vw, 3rem);
+        color: color.$veryDarkCyan;
+    }
+    button {
+        width: 60%;
+        max-width: 300px;
+        padding: 1.5em;
+        font-family: "Open Sans", sans-serif;
+        font-size: clamp(1rem, 1vw, 2rem);
+        background-color: color.$pink;
+        color: #fff;
+        border: none;
+        margin-bottom: 5em;
+    }
+}
+
+@media (max-width: 1000px) {
+    .section {
+        .stats {
+            flex-direction: column;
+            .stat-section {
+                width: 100%;
+                align-items: center;
+                img {
+                    width: 15vw;
+                }
+                .stat_title {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 4rem;
+                }
+            }
+        }
+        &.row {
+            margin-top: 0em;
+            padding: 10em 0em;
+            .section-wrapper {
+                flex-direction: column;
+                flex-flow: column-reverse;
+                img {
+                    width: 90%;
+                }
+                .section-paragraph {
+                    width: 90%;
+                    margin-top: 2em;
+                    h2,
+                    p {
+                        text-align: center;
+                    }
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            &.inverted {
+                .section-wrapper {
+                    flex-flow: column;
+                }
+                .section-wrapper .section-paragraph {
+                    padding-left: 0em;
+                }
+            }
+        }
+        h2 {
+            width: 100%;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        button {
+            width: 85%;
+            padding: 1em;
         }
     }
 }

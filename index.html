@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <title>Frontend Mentor | Huddle Landing Page</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script src="https://kit.fontawesome.com/58b15347c7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -70,8 +71,8 @@
             </div>
         </div>
         <div class="section row fill">
-            <img src="./assets/img/bg-section-top-desktop-1.svg" class="top_img" alt="background top">
-            <img src="./assets/img/bg-section-bottom-desktop-1.svg" class="bottom_img" alt="background bottom">
+            <img src="./assets/img/bg-section-top-desktop-2.svg" class="top_img" alt="">
+            <img src="./assets/img/bg-section-bottom-desktop-2.svg" class="bottom_img" alt="">
             <div class="section-wrapper">
                 <div class="section-paragraph">
                     <h2>Your Users</h2>
@@ -80,7 +81,7 @@
                         once signed in to your app, your users can start chatting immediately.
                     </p>
                 </div>
-                <img src="./assets/img/illustration-grow-together.svg" alt="">
+                <img src="./assets/img/illustration-your-users.svg" alt="">
             </div>
         </div>
         <div class="section">
@@ -88,6 +89,46 @@
             <button class="btn">Get Started For Free</button>
         </div>
     </main>
+    <footer>
+        <img src="./assets/img/bg-footer-top-desktop.svg" alt="">
+        <div class="footer-wrapper">
+            <div class="info">
+                <img src="./assets/icons/logo.svg" alt="">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia
+                    vestibulum
+                    a, ultrices quis sem.
+                </p>
+                <div class="icon-box">
+                    <img src="./assets/icons/icon-phone.svg" alt="">
+                    <span>Phone: +1-543-123-4567</span>
+                </div>
+                <div class="icon-box">
+                    <img src="./assets/icons/icon-email.svg" alt="">
+                    <span>example@huddle.com</span>
+                </div>
+                <div class="socials">
+                    <i class="fa fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter-square"></i>
+                </div>
+            </div>
+            <div class="newsletter">
+                <h2>Newsletter</h2>
+                <p>
+                    To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send
+                    you
+                    spam or pass on your email address
+                </p>
+                <form onsubmit="showMsg(event)">
+                    <input type="email">
+                    <input type="submit" value="Subscribe" id="btn_submit">
+                </form>
+                <span id="msg_success">Check your email, please :D</span>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/mail.js"></script>
 </body>
 
 </html>

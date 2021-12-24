@@ -19,11 +19,29 @@ header {
         button {
             padding: 1em;
             color: color.$pink;
-            width: clamp(7em, 20vw, 8em);
+            width: clamp(9em, 20vw, 9em);
             max-width: 300px;
             font-size: clamp(1rem, 2vw, 1rem);
             border: 1px solid color.$pink;
             box-shadow: 0px 0px 5px color.$lightPink;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    header {
+        margin-top: 1em;
+        .logo {
+            padding-left: 0;
+            img {
+                width: 200px;
+            }
+        }
+        .try {
+            padding-right: 0em;
+            button {
+                font-size: 0.8rem;
+            }
         }
     }
 }
