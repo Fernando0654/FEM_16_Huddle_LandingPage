@@ -109,6 +109,19 @@ footer {
             }
         }
     }
+    span {
+        display: block;
+        width: 100%;
+        background-color: color.$veryDarkCyan;
+        color: #fff;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        padding-bottom: 2em;
+        min-height: 4vh;
+        a {
+            color: rgb(49, 87, 143);
+        }
+    }
 }
 
 @media (max-width: 1000px) {
