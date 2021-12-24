@@ -1,0 +1,91 @@
+@use "../util/mixins" as mixin;
+@use "../util/colors" as color;
+
+.section {
+    @include mixin.flex(column, center, center);
+    width: 95%;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 3em;
+    img {
+        width: 90%;
+    }
+    .stats {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 1000px;
+        .stat-section {
+            @include mixin.flex(column, start, flex-start);
+            width: 50%;
+            img {
+                width: 3vw;
+            }
+            .stat_title {
+                font-size: clamp(2rem, 5vw, 5rem);
+                font-family: "Poppins", sans-serif;
+                margin: 0;
+                color: color.$veryDarkCyan;
+            }
+            span {
+                font-family: "Open Sans", sans-serif;
+                color: color.$pink;
+            }
+        }
+    }
+    &.row {
+        width: 100%;
+        max-width: inherit;
+        padding: 14em 0em;
+        margin-top: 5em;
+        position: relative;
+        .section-wrapper {
+            @include mixin.flex(row, center, center);
+            width: 95%;
+            max-width: 1000px;
+            margin: auto;
+            .section-paragraph {
+                @include mixin.flex(column, center, center);
+                width: 50%;
+                h2 {
+                    width: 100%;
+                    font-family: "Poppins", sans-serif;
+                    font-size: clamp(2.2rem, 2vw, 4rem);
+                    margin: 0;
+                    text-align: left;
+                    color: color.$veryDarkCyan;
+                }
+                p {
+                    font-family: "Open Sans", sans-serif;
+                    color: color.$veryDarkCyan;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    font-size: clamp(0.8rem, 0.9vw, 2rem);
+                }
+            }
+            img {
+                width: 50%;
+            }
+        }
+        &.inverted {
+            .section-wrapper .section-paragraph {
+                padding-left: 4em;
+            }
+        }
+        &.fill {
+            background:  linear-gradient(to bottom, #f6fbff 0%, #f6fbff 100%) no-repeat;
+            background-position: center;
+            background-size: 100% calc(100% - 19vw);
+        }
+        .top_img, .bottom_img {
+            position: absolute;
+            width: 100%;
+        }
+        .top_img {
+            top: 0;
+        }
+        .bottom_img {
+            bottom: 0;
+        }
+    }
+}
